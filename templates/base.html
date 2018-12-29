@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {% block stylesheet %}{% endblock stylesheet %}
+        
+    <title>{% block pageTitle %}{% endblock pageTitle %}</title>
+</head>
+<body>
+    <header>{% block pageHeader %}
+        
+        {% include 'base/navBar.html' %}
+
+        {% endblock pageHeader %}</header>
+
+    
+
+    {% block mainContent %}
+    {% endblock mainContent %}
+
+
+
+    <footer>{% block pageFooter %}{% endblock pageFooter %}</footer>
+        
+    
+</body>
+</html>

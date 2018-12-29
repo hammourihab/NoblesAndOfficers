@@ -1,0 +1,34 @@
+
+{% block pageHeader %}
+
+    {% load static %}
+    <img id="bg" src="{% static 'images/background.jpg' %}" alt="">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/topBar.css' %}">
+    <div class="topBar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Calendar</a>
+        <a href="#">Cards</a>
+        <a href="#">Member Of The Month</a>
+
+        <div class="container" onclick="openMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div class="sideMenu" id="sideMenu">
+        <a href="javascript:void(0)" id="clsBtn" onclick="closeMenu()">&times;</span>
+        <a href="#">Login</a>
+        <a href="#">SignIn</a>
+        <a href="#">Contact</a>
+        
+
+    </div>
+
+    {% load static %}
+    <script src="{% static 'js/topBar.js' %}"></script>
+{% endblock pageHeader %}
+    
