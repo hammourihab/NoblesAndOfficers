@@ -1,25 +1,27 @@
-.topBar{
+
+#TopBar{
     background-color: #444;
-    width: 100%;
-    height: 50px;
+    /*width: 100%;*/
+    height: 40px;
     overflow: hidden;
-    line-height: 50px;
+    line-height: 40px;
+    padding: 14px 16px;
     text-align: center;
     border-bottom: 3px solid black;
+    z-index: 1;
 }
 
 
-.topBar a{
+#TopBar a{
     color: rgb(0, 211, 18);
     font-size: 17px;
     text-decoration: none;
-    padding: 25px 15px;
+    padding: 35px 15px;
     text-align: center;
-    overflow: auto;
 }
 
 
-.topBar a:hover{
+#TopBar a:hover{
     color: white;
     background-color: rgb(6, 158, 19);
     border: 2px solid white;
@@ -39,7 +41,7 @@
     height: 100%;
     position: fixed;
     width: 0;
-    z-index: 1;
+    z-index: 10;
     overflow-x: hidden;
     background-color: #111;
     transition: 0.8s;
@@ -68,10 +70,10 @@
 .container{
     display: inline-block;
     position: absolute;
-    margin: 4px 0;
-    right: 15px;
+    margin: 4px 2px;
+    right: 25px;
     cursor: pointer;
-    transition: 0.4s;
+    overflow: hidden;
 }
 
 .container .bar{
@@ -79,4 +81,22 @@
     height: 6px;
     background-color: white;
     margin: 6px 0;
+}
+
+.content{
+    padding: 16px 0;
+}
+
+.sticky{
+    position: fixed;
+    top: 2px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vh;
+    padding: 14px 16px;
+}
+
+.sticky + .content{
+    padding-top: 60px;
 }

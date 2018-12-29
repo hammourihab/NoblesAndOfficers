@@ -9,7 +9,15 @@
 {% block pageTitle %}Nobles & Officers | Home{% endblock pageTitle %}
 
 
+{%  block pageHeader %}
+{% load static %}
+    <img id="bg" src="{% static 'images/background.jpg' %}" alt="Nobles and officers Background">
+    {% include 'base/navBar.html' %}
+
+{% endblock pageHeader %}
+
 {% block mainContent %}
+    <div class="content">
     <div class="slideshowCont">
         <div class="slides fade">
             <div class="numberText">1 / 3</div>
@@ -39,9 +47,9 @@
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
-
     {% load static %}
     <script src="{% static 'js/index.js' %}"></script>
+    </div>
 {% endblock mainContent %}
     
 
