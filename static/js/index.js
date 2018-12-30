@@ -26,3 +26,22 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
+var modals = document.getElementsByClassName("modal");
+var images = document.getElementsByClassName("slideImg");
+var modalImgs = document.getElementsByClassName("modal-content");
+
+for(var i = 0; i<images.length; i++)
+{
+  console.log(modals[i]);
+  images[i].onclick = function () {
+  modals[i].style.display = "block";
+  modalImgs[i].src = this.src;
+
+  }
+}
+
+var span = document.getElementsByClassName("closeImg")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}

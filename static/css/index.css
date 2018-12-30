@@ -6,12 +6,18 @@ body{
 
 .slideshowCont{
     max-width: 900px;
+    max-height: 600px;
     position: relative;
     margin: auto;
 }
 
 .slides{
     display: none;
+    cursor: pointer;
+}
+
+.slides:hover{
+    opacity: 0.8;
 }
 
 .prev, .next{
@@ -56,6 +62,12 @@ body{
     top: 0;
 }
 
+.content{
+    background-color: darkgray;
+    width: 80%;
+    margin: auto;
+    padding-top: 5px;
+}
 
 .dot {
     cursor: pointer;
@@ -78,6 +90,64 @@ fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 11; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content{
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom{
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeImg {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeImg:hover,
+.closeImg:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
   
 @-webkit-keyframes fade {
     from {opacity: .4} 
