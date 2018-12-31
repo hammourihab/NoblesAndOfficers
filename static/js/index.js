@@ -27,21 +27,18 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var modals = document.getElementsByClassName("modal");
-var images = document.getElementsByClassName("slideImg");
-var modalImgs = document.getElementsByClassName("modal-content");
+var slideDex = 0;
+autoSlide();
 
-for(var i = 0; i<images.length; i++)
-{
-  console.log(modals[i]);
-  images[i].onclick = function () {
-  modals[i].style.display = "block";
-  modalImgs[i].src = this.src;
-
+function autoSlide() {
+  var i;
+  var slides = document.querySelectorAll(".slides");
+  console.log(slides, slides[1], slides[2]);
+  for (i = 0; i < slides.length; i++) {
+    document.querySelectorAll(".slides")[i].style.display = "none";
   }
-}
-
-var span = document.getElementsByClassName("closeImg")[0];
-span.onclick = function() {
-  modal.style.display = "none";
+  slideIndex++;
+  if (slideDex > slides.length) {slideDex = 1}
+  document.querySelectorAll(".slides")[slideDex-1].style.display = "block";
+  setTimeout(autoSlide, 2000); // Change image every 2 seconds
 }

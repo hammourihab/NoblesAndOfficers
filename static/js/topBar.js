@@ -1,15 +1,20 @@
+window.onscroll = function(){scrollFunction()};
+
+
+var obj = document.getElementById("sideMenu");
 var navbar = document.getElementById("TopBar");
 var yOffset = navbar.offsetTop;
-window.onscroll = function(){scrollFunction()};
+
+
+
 
 function openMenu()
 {
-    var obj = document.getElementById("sideMenu");
     obj.style.width = "300px";
+
 }
 function closeMenu()
 {
-    var obj = document.getElementById("sideMenu");
     obj.style.width = "0px";
 }
 
